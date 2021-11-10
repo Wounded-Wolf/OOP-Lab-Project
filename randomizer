@@ -1,0 +1,94 @@
+import java.util.*; // will import arrays
+class PIN
+{
+    int personal;
+    PIN(int personal) // a constructor
+    {
+        this.personal = personal;
+    }
+    private void writeRandom()
+    {
+        System.out.println("Will work in the future"); // after mids
+    }
+    public String randomizing(int num)
+    {
+        int[] randoms = new int[4]; // Infinity
+        Random random = new Random();
+        String conc = "", n;
+        for(int i = 0; i < randoms.length; i++)
+		    {
+		        int r = random.nextInt(10);
+		        randoms[i] = r;
+		        n = sele(r);
+		        conc = conc.concat(n);
+		        System.out.println("Random Number is: " + r);
+		    }
+		    System.out.println(conc);
+		    return conc;
+    }
+    private String sele(int nums)
+    {
+        String ret;
+        switch(nums)
+        {
+            case 0:
+                ret = "23";
+                break;
+            case 1:
+                ret = "58";
+                break;
+            case 2:
+                ret = "98";
+                break;
+            case 3:
+                ret = "45";
+                break;
+            case 4:
+                ret = "31";
+                break;
+            case 5:
+                ret = "99";
+                break;
+            case 6:
+                ret = "15";
+                break;
+            case 7:
+                ret = "56";
+                break;
+            case 8:
+                ret = "25";
+                break;
+            case 9:
+                ret = "13";
+                break;
+            default:
+                ret = "10";
+                break;
+        }
+        return ret;
+    }
+    private void reverse_engine(String conc)
+    {
+        String n = "";
+        double len = conc.length()/2;
+        int l = (int) len;
+        for(int i = 0; i < l; i++)
+        {
+            for(int j = 0; j < 1; j++)
+            {
+                System.out.print("Message");
+            }
+        }
+        
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int i = scanner.nextInt();
+		PIN pin = new PIN(i);
+		String p = pin.randomizing(i);
+		
+	}
+}
